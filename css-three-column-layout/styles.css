@@ -1,0 +1,53 @@
+html {
+  font-family: Lato, sans-serif;
+  color: white;
+}
+
+section {
+  padding: 26px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.blue-bg {
+  background-color: #1996da;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+}
+
+.white-dot {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
