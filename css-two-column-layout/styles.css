@@ -13,7 +13,6 @@ p {
   font-size: 11.5px;
   font-weight: 600;
   color: #777;
-  line-height: 20px;
 }
 
 .about-title {
@@ -21,6 +20,8 @@ p {
   letter-spacing: 1px;
   color: #3c3c3c;
   font-weight: 700px;
+  -webkit-text-stroke: 0.5px black;
+  line-height: 16px;
 }
 
 .container {
@@ -31,6 +32,19 @@ p {
 .intro-container {
   width: 530px;
   margin: auto;
+}
+
+p.about-title {
+  margin-bottom: 0;
+}
+
+.line-height-20 {
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.margin-top {
+  margin-top: 15px;
 }
 
 .wrap {
@@ -46,13 +60,14 @@ p {
   display: flex;
 }
 
-.column-fourth {
-  flex-basis: calc(100% / 4);
+.column-third {
+  flex-basis: calc(100% / 3);
   display: flex;
+  justify-content: flex-end;
 }
 
-.column-three-fourth {
-  flex-basis: calc((100% / 4) * 3);
+.column-two-third {
+  flex-basis: calc((100% / 3) * 2);
   display: flex;
   flex-wrap: wrap;
 }
@@ -67,20 +82,39 @@ p {
 }
 
 .icon-container {
-  padding-top: 22px;
+  padding-top: 24px;
   height: 200px;
+  margin-right: 5px;
 }
 
-.text-container {
+.text-container-top {
   height: 200px;
   align-items: flex-end;
 }
 
+.text-container-bottom {
+  height: 165px;
+  align-items: flex-end;
+}
+
 .description {
-  width: 210px;
+  width: 220px;
 }
 
 .icon {
   width: 90px;
   height: 90px;
+}
+
+.learnmore {
+  margin: auto;
+  border: 2px solid #df8580;
+  width: 146px;
+  height: 32px;
+  background-color: white;
+  color: #df8580;
+  font-size: 10.5px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.2px #df8580;
+  letter-spacing: 0.5px;
 }
