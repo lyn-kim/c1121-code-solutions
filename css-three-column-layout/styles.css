@@ -4,27 +4,49 @@ html {
 }
 
 section {
-  padding: 40px;
+  padding: 35px;
   justify-content: center;
   align-items: center;
 }
 
+h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+  color: #cfd7dd;
+  line-height: 18px;
+}
+
+.bottom-margin-sm {
+  margin-bottom: 12px;
+}
+
+.header {
+  padding: 14px;
+}
+
 .container {
-  width: 80%;
+  width: 800px;
   margin: auto;
-  background-color: salmon;
+  display: flex;
 }
 
 .row {
   display: flex;
 }
 
-.column-full {
-  width: 100%;
-}
-
 .column-one-third {
   flex-basis: calc(100% / 3);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .blue-bg {
@@ -39,8 +61,8 @@ section {
 
 .icon-bg {
   display: flex;
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -48,12 +70,11 @@ section {
 }
 
 .icon {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 
-.white-dot {
-  width: 100px;
-  height: 100px;
-  background-color: white;
+.text-boundary {
+  width: 88%;
+  margin: auto;
 }
