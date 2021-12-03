@@ -43,10 +43,6 @@ p.about-title {
   margin-top: 5px;
 }
 
-.margin-top {
-  margin-top: 15px;
-}
-
 .wrap {
   flex-wrap: wrap;
 }
@@ -57,19 +53,14 @@ p.about-title {
 
 .column-half {
   flex-basis: 400px;
-  display: flex;
 }
 
 .column-third {
   flex-basis: calc(100% / 3);
-  display: flex;
-  justify-content: flex-end;
 }
 
 .column-two-third {
   flex-basis: calc((100% / 3) * 2);
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .text-center {
@@ -82,6 +73,8 @@ p.about-title {
 }
 
 .icon-container {
+  position: relative;
+  left: 35px;
   padding-top: 24px;
   height: 200px;
   margin-right: 5px;
@@ -99,6 +92,8 @@ p.about-title {
 
 .description {
   width: 220px;
+  position: relative;
+  top: 40px;
 }
 
 .icon {
