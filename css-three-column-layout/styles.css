@@ -4,7 +4,7 @@ html {
 }
 
 section {
-  padding: 26px;
+  padding: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -12,10 +12,15 @@ section {
 .container {
   width: 80%;
   margin: auto;
+  background-color: salmon;
 }
 
 .row {
   display: flex;
+}
+
+.column-full {
+  width: 100%;
 }
 
 .column-one-third {
@@ -26,11 +31,13 @@ section {
   background-color: #1996da;
 }
 
-.center-text {
+.center {
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.services {
+.icon-bg {
   display: flex;
   width: 90px;
   height: 90px;
@@ -41,9 +48,8 @@ section {
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
-  z-index: 100;
+  width: 45px;
+  height: 45px;
 }
 
 .white-dot {
