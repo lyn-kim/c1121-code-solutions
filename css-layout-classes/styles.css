@@ -1,0 +1,40 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-third {
+  flex-basis: calc((100% / 3) * 2);
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
