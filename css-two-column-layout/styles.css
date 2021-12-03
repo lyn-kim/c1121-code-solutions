@@ -1,0 +1,86 @@
+html {
+  font-family: Karla, sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #777;
+  line-height: 20px;
+}
+
+.about-title {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #3c3c3c;
+  font-weight: 700px;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.intro-container {
+  width: 530px;
+  margin: auto;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  flex-basis: 400px;
+  display: flex;
+}
+
+.column-fourth {
+  flex-basis: calc(100% / 4);
+  display: flex;
+}
+
+.column-three-fourth {
+  flex-basis: calc((100% / 4) * 3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.content-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  padding-top: 22px;
+  height: 200px;
+}
+
+.text-container {
+  height: 200px;
+  align-items: flex-end;
+}
+
+.description {
+  width: 210px;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+}
