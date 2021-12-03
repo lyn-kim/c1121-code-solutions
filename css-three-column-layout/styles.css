@@ -36,7 +36,6 @@ p {
 .container {
   width: 800px;
   margin: auto;
-  display: flex;
 }
 
 .row {
