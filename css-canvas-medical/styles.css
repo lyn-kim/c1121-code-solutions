@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar,
+.navlinks {
+  font-family: Avenir, sans-serif;
+}
+
+.navlinks {
+  display: inline;
+  margin-right: 30px;
+  font-size: 11px;
+}
+
+.navlinks > a {
+  color: gray;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 100px;
+  margin-left: 40px;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f2f3f5;
+}
+
+.contact-button {
+  height: 30px;
+  width: 80px;
+  border-radius: 4px;
+}
+
+div > .contact-button {
+  margin-top: 10px;
+  background-color: #294464;
+  color: white;
+  border: none;
+}
