@@ -34,6 +34,16 @@
   display: flex;
 }
 
+.column-full {
+  width: 100%;
+  margin: auto;
+}
+
+.column-half {
+  width: 50%;
+  margin: auto;
+}
+
 .border-bottom {
   border-bottom: 1px solid #f2f3f5;
 }
@@ -94,10 +104,48 @@ div > .contact-button {
   background-image: url("images/hero.jpg");
   background-size: cover;
   margin: auto;
+  margin-bottom: 48px;
 }
 
 .overlay {
   width: 835px;
   height: 380px;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.lightgray-bg {
+  background-color: #fafafa;
+}
+
+.locations-text {
+  color: #727272;
+  text-align: center;
+  width: 100%;
+}
+
+.locations-text-h {
+  font-family: "Tiempos Headline", serif;
+  font-weight: 500;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.locations-text-p-title {
+  font-family: Avenir, sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+}
+
+.locations-list-container {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.locations-list {
+  font-family: Avenir, sans-serif;
+  font-size: 0.9rem;
+  width: 50%;
+  text-align: center;
+  height: 2rem;
 }
