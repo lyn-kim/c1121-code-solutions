@@ -48,6 +48,11 @@
   border-bottom: 1px solid #f2f3f5;
 }
 
+.section-padding {
+  padding-top: 0;
+  padding-left: 45px;
+}
+
 .contact-button {
   height: 30px;
   width: 75px;
@@ -115,22 +120,24 @@ div > .contact-button {
 
 .lightgray-bg {
   background-color: #fafafa;
+  padding-top: 1.2rem;
 }
 
-.locations-text {
+.section-text {
   color: #727272;
   text-align: center;
   width: 100%;
 }
 
-.locations-text-h {
+.section-text-h {
   font-family: "Tiempos Headline", serif;
   font-weight: 500;
-  margin-top: 3rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
-.locations-text-p-title {
+.section-text-p {
   font-family: Avenir, sans-serif;
   font-size: 0.7rem;
   line-height: 1.2rem;
