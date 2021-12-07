@@ -1,0 +1,59 @@
+html {
+  background-color: #f7f8fa;
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.app-img {
+  width: 9.5rem;
+}
+
+.icon-img {
+  width: 2rem;
+}
+
+.icon-text {
+  color: #171717;
+  font-size: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.icon-description {
+  color: #6b6b6c;
+  font-size: 0.4rem;
+  font-weight: 500;
+}
