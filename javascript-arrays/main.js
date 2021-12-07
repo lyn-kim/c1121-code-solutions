@@ -12,6 +12,7 @@ var students = ['Harry', 'Hermione', 'Ron', 'Draco'];
 var numberOfStudents = students.length;
 console.log('There are ' + numberOfStudents + ' students in the class.');
 
-// var lastIndex = 1;
-var lastStudent = students.lastIndex;
+var lastIndex = numberOfStudents - 1;
+var lastStudent = students[lastIndex];
 console.log('The last student in the array is ' + lastStudent + '.');
+console.log('value of students', students);
