@@ -7,7 +7,7 @@
 
 function capitalize(word) {
   var lowercase = word.toLowerCase();
-  var firstChar = word[0].toUpperCase(lowercase[0]);
+  var firstChar = word[0].toUpperCase();
   var finalWord = lowercase.replace(lowercase[0], firstChar);
   return finalWord;
 }
