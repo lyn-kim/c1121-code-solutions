@@ -6,17 +6,12 @@
 // say false if it is not
 
 function isVowel(char) {
-  char.toLowerCase();
-  if (char === 'a' ||
-      char === 'e' ||
-      char === 'i' ||
-      char === 'o' ||
-      char === 'u' ||
-      char === 'A' ||
-      char === 'E' ||
-      char === 'I' ||
-      char === 'O' ||
-      char === 'U') {
+  var lowercase = char.toLowerCase();
+  if (lowercase === 'a' ||
+      lowercase === 'e' ||
+      lowercase === 'i' ||
+      lowercase === 'o' ||
+      lowercase === 'u') {
     return true;
   }
   return false;
