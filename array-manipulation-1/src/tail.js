@@ -9,8 +9,8 @@
 function tail(array) {
   var item = '';
   var newArray = [];
-  for (var i = 0; i < array.length - 1; i++) {
-    item = array[i + 1];
+  for (var i = 1; i < array.length; i++) {
+    item = array[i];
     newArray.push(item);
   }
   return newArray;
