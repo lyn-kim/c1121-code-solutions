@@ -7,9 +7,9 @@ function pushUserInput(event) {
   var email = contactForm.elements.email.value;
   var msg = contactForm.elements.message.value;
   var inputs = {
-    'Name:': name,
-    'Email:': email,
-    'Message:': msg
+    name: name,
+    email: email,
+    message: msg
   };
   console.log('User Input Values:', inputs);
   contactForm.reset();
