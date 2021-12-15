@@ -1,5 +1,7 @@
+var lightOn = true;
+
 function lightSwitch(event) {
-  if (button.className === 'light on') {
+  if (button.classList.contains('on') === lightOn) {
     button.className = 'light off';
     bg.className = 'off-bg centered';
   } else {
