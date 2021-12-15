@@ -13,16 +13,12 @@ var openButton = document.querySelector('button.open-button');
 openButton.addEventListener('click', modalStatus);
 
 function modalStatus(event) {
-  if (hidden.className === 'relative display-none') {
-    hidden.className = 'relative';
-  }
+  hidden.className = 'relative';
 }
 
 var noButton = document.querySelector('button.no-button');
 noButton.addEventListener('click', closeModal);
 
 function closeModal(event) {
-  if (hidden.className === 'relative') {
-    hidden.className = 'relative display-none';
-  }
+  hidden.className = 'relative display-none';
 }
