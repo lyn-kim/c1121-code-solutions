@@ -68,9 +68,8 @@ var pokedex = [
 //   pokeCard.className = 'pokemon-card';
 //   columnThird.appendChild(pokeCard);
 
-//   // start to set attributes here
 //   var pokeImg = document.createElement('img');
-//   pokeImg.src = 'images/squirtle.png';
+//   pokeImg.src = pokemon.imageUrl;
 //   pokeCard.appendChild(pokeImg);
 
 //   var pokeCardText = document.createElement('div');
@@ -78,19 +77,24 @@ var pokedex = [
 //   pokeCard.appendChild(pokeCardText);
 
 //   var pokeName = document.createElement('h2');
-//   var pokeNameText = document.createTextNode('Pikachu');
+//   var pokeNameText = document.createTextNode(pokemon.name);
 //   pokeName.appendChild(pokeNameText);
 //   pokeCardText.appendChild(pokeName);
 
 //   var pokeNum = document.createElement('h3');
-//   var pokeNumText = document.createTextNode('#025');
+//   var pokeNumText = document.createTextNode(pokemon.number);
 //   pokeNum.appendChild(pokeNumText);
 //   pokeCardText.appendChild(pokeNum);
 
 //   var caption = document.createElement('p');
-//   var captionText = document.createTextNode(pokedex[0].description);
+//   var captionText = document.createTextNode(pokemon.description);
 //   caption.appendChild(captionText);
 //   pokeCardText.appendChild(caption);
 
 //   console.log(columnThird);
+// }
+
+// var cardRow = document.querySelector('.row');
+// for (var i = 0; i < pokedex.length; i++) {
+
 // }
