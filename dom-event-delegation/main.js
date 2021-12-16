@@ -8,7 +8,6 @@ function taskDone(event) {
   if (event.target.tagName === 'BUTTON') {
     var parent = event.target.closest('.task-list-item');
     console.log('closest .task.list.item:', parent);
-    var item = document.querySelector('.task-list-item');
-    item.remove();
+    parent.remove();
   }
 }
