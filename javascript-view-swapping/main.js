@@ -20,10 +20,6 @@ function tabChange(event) {
 
   var dataView = event.target.getAttribute('data-view');
 
-  if (event.target.matches('.tab') !== true) {
-    return;
-  }
-
   for (i = 0; i < view.length; i++) {
     if (view[i].getAttribute('data-view') === dataView) {
       view[i].className = 'view';
