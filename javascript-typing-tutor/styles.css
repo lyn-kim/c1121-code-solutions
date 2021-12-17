@@ -1,0 +1,29 @@
+* {
+  font-family: 'courier new', Courier, monospace;
+}
+
+.box {
+  margin-top: 300px;
+}
+
+p {
+  text-align: center;
+  margin: auto;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.next {
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+}
+
+.correct {
+  color: rgb(99, 187, 11);
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+}
