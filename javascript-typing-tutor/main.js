@@ -15,42 +15,15 @@ function checkLetter(event) {
       }
       return;
     }
+    if (span[i].className === 'incorrect') {
+      currentLetter = span[i].innerText;
+      if (event.key !== currentLetter) {
+        span[i].className = 'incorrect';
+      } else {
+        span[i].className = 'correct';
+        span[i + 1].className = 'next';
+      }
+      return;
+    }
   }
 }
-
-// for (var i = 0; i < span.length; i++) {
-//   if (span[i].className !== 'next') {
-//     console.log('span[i]', span[i]);
-//     span[i].className = 'correct';
-//     span[i + 1].className = 'next';
-//   } else {
-//     span[i].className = 'incorrect';
-//   }
-// }
-
-// for (var i = 0; i < span.length; i++) {
-//   var currentLetter = span[i].innerText;
-//   if (event.key === currentLetter) {
-//     span[i].className = 'correct';
-//     span[i + 1].className = 'next';
-//   } else if (event.key !== currentLetter) {
-//     span[i].className = 'incorrect';
-//     return;
-//   }
-// }
-
-// TEMP REUSE
-// if (event.key === currentLetter) {
-//   span[i].className = 'correct';
-// } else {
-//   span[i].className = 'next';
-// }
-
-// BOOLEAN VARIABLE OPTION
-// var correct = true;
-// if (correct) {
-//   for (var i = 0; i < span.length; i++) {
-//     span[i].className = 'correct';
-//     console.log('span[i]:', span[i]);
-//   }
-// }
