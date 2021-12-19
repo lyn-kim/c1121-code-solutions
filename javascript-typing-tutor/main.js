@@ -5,18 +5,39 @@ document.addEventListener('keydown', checkLetter);
 function checkLetter(event) {
 
   for (var i = 0; i < span.length; i++) {
-    var currentLetter = span[i].innerText;
-    if (event.key === currentLetter) {
-      span[i].className = 'correct';
-      span[i + 1].className = 'next';
-      return;
-    } else if (event.key !== currentLetter) {
-      span[i].className = 'incorrect';
+    if (span[i].className === 'next') {
+      var currentLetter = span[i].innerText;
+      if (event.key !== currentLetter) {
+        span[i].className = 'incorrect';
+      } else {
+        span[i].className = 'correct';
+        span[i + 1].className = 'next';
+      }
       return;
     }
   }
-
 }
+
+// for (var i = 0; i < span.length; i++) {
+//   if (span[i].className !== 'next') {
+//     console.log('span[i]', span[i]);
+//     span[i].className = 'correct';
+//     span[i + 1].className = 'next';
+//   } else {
+//     span[i].className = 'incorrect';
+//   }
+// }
+
+// for (var i = 0; i < span.length; i++) {
+//   var currentLetter = span[i].innerText;
+//   if (event.key === currentLetter) {
+//     span[i].className = 'correct';
+//     span[i + 1].className = 'next';
+//   } else if (event.key !== currentLetter) {
+//     span[i].className = 'incorrect';
+//     return;
+//   }
+// }
 
 // TEMP REUSE
 // if (event.key === currentLetter) {
