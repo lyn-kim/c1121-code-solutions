@@ -1,6 +1,9 @@
 /* exported lastChars */
 
+// make copy of string
+// give back word that excludes length amount of letters starting from the end
+
 function lastChars(length, string) {
-  // var newString = '';
-  return string.slice(-length);
+  var newString = string.slice();
+  return newString.slice(-length);
 }
