@@ -1,13 +1,13 @@
 /* exported defaults */
 
-// function defaults(target, source) {
-//   for (var i = 1; i < source.length; i++) {
-//     var target
-//     console.log('target keys', Object.keys(source));
-//     // if (target.i !== source.i)
-//   }
+// for every key in the source object
+// if key in target object does not exist
+// source object property gets copied to target object
 
-//   target = source;
-//   console.log('target', target);
-
-// }
+function defaults(target, source) {
+  for (var key in source) {
+    if ((key in target) === false) {
+      target[key] = source[key];
+    }
+  }
+}
