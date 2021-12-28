@@ -16,3 +16,12 @@ function swapChars(firstIndex, secondIndex, string) {
   stringCopy.splice(secondIndex, 1, stringCopyFirstIndex);
   return stringCopy.join('');
 }
+
+// function swapChars(firstIndex, secondIndex, string) {
+//   var newString = '';
+//   var firstIndexLetter = string[firstIndex];
+//   // console.log('firstIndexLetter:', firstIndexLetter);
+//   var secondIndexLetter = string[secondIndex];
+//   // console.log('secondIndexLetter:', secondIndexLetter);
+
+// }
