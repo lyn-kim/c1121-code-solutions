@@ -30,7 +30,6 @@ Account.prototype.getBalance = function () {
   var deposit = 0;
   for (var i = 0; i < this.transactions.length; i++) {
     if (this.transactions[i].type === 'deposit') {
-      // console.log('this.transactions[i]:', this.transactions[i]);
       deposit += this.transactions[i].amount;
     }
   }
