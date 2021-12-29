@@ -27,12 +27,9 @@ Bank.prototype.getAccount = function (number) {
 };
 
 Bank.prototype.getTotalAssets = function () {
+  var total = 0;
   for (var i = 0; i < this.accounts.length; i++) {
-    if (this.accounts.length > 0) {
-      var total = 0;
-      total += this.accounts[i].getBalance();
-      return total;
-    }
+    total += this.accounts[i].getBalance();
   }
-  return 0;
+  return total;
 };
