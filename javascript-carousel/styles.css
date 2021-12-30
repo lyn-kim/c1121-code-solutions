@@ -1,0 +1,52 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.center {
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.border {
+  border: 2px solid black;
+  padding: 2rem 0;
+}
+
+button.previous,
+button.next {
+  background: none;
+  border: none;
+  font-size: 60px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: white;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: black;
+}
