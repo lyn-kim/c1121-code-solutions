@@ -15,6 +15,7 @@ function goToPrevImage(event) {
   if (imageIndex < 0) {
     imageIndex = 4;
   }
+  // add increment/decrement here?
 }
 
 var next = document.querySelector('.next');
@@ -24,9 +25,11 @@ function goToNextImage(event) {
   if (imageIndex >= 5 || imageIndex <= 0) {
     imageIndex = 0;
   }
+  // add increment/decrement here?
 }
 
 function showImage() {
+  // this line underneath should go somewhere below the codeblock
   currentImage.src = images[imageIndex];
   imageIndex++;
   if (imageIndex === 5) {
@@ -48,11 +51,16 @@ function showImage() {
   clearInterval(countIndex);
 }
 
-// function skipToImg(index) {
-//   dot[index].className = 'dot active';
-//   currentImage.src = images[index];
-//   dot[index].className = 'dot';
-// }
+function skipToImg(event) {
+  var index = event.target.getAttribute('data-image');
+  dot[index].className = 'dot active';
+  currentImage.src = images[index];
+  dot[index].className = 'dot';
+}
 
-setInterval(showImage, 3000);
+var $dotContainer = document.querySelector('.dot-container');
+
+$dotContainer.addEventListener('click', skipToImg);
+
+setInterval(showImage, 1000);
 showImage(imageIndex);
