@@ -4,7 +4,7 @@ var images = ['images/001.png', 'images/004.png', 'images/007.png', 'images/025.
 var imageIndex = 0;
 
 var dot = document.querySelectorAll('.dot');
-var dotIndex = 0;
+// var dotIndex = 0;
 
 var countIndex = 5;
 
@@ -37,15 +37,16 @@ function showImage() {
   }
 
   // for-loop for dots
-  dotIndex++;
   for (var i = 0; i < dot.length; i++) {
-    if (i === dotIndex) {
-      dot[i].className = 'dot active';
-      dot[i - 1].className = 'dot';
-      if (dotIndex > dot.length) {
-        dotIndex = 0;
-      }
+    if (i === imageIndex) {
+      dot[i].className = 'dot fas fa-circle';
+    } else {
+      dot[i].className = 'dot far fa-circle';
     }
+    // if (dotIndex > dot.length) {
+    //   dotIndex = 0;
+    //   dotIndex++;
+    // }
   }
 
   clearInterval(countIndex);
@@ -53,14 +54,12 @@ function showImage() {
 
 function skipToImg(event) {
   var index = event.target.getAttribute('data-image');
-  dot[index].className = 'dot active';
+  dot[index].className = 'dot fas fa-circle';
   currentImage.src = images[index];
-  dot[index].className = 'dot';
 }
 
 var $dotContainer = document.querySelector('.dot-container');
-
 $dotContainer.addEventListener('click', skipToImg);
 
 setInterval(showImage, 1000);
-showImage(imageIndex);
+// showImage(imageIndex);

@@ -37,16 +37,6 @@ button.next {
   font-size: 60px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  border-radius: 50%;
-  border: 2px solid black;
-  background: white;
-}
-
-.dot.active,
-.dot:hover {
-  background-color: black;
+i {
+  margin-left: 4px;
 }
