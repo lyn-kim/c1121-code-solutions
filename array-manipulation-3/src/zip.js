@@ -1,29 +1,36 @@
 /* exported zip */
 
+// create empty array to store result
+// create new variable to store number of shortest length
+// for each string in the first and second array
+// place them into an array and move it to empty array
+// give back result
+
 function zip(first, second) {
-  var newArray = [];
   var finalArray = [];
-  for (var i = 0; i < first.length; i++) {
-    newArray.push(first[i]);
-    newArray.push(second[i]);
+  var shorterLength = Math.min(first.length, second.length);
+  for (var i = 0; i < shorterLength; i++) {
+    finalArray.push([first[i], second[i]]);
   }
-
-  for (i = 0; i < newArray.length; i++) {
-    finalArray.push(newArray.slice(0, 1));
-    // console.log(finalArray);
-  }
-
   return finalArray;
 }
 
-// function chunk(array, size) {
-//   var newArray = [];
-//   for (var i = 0; i < array.length; i += size) {
-//     if (i < array.length) {
-//       newArray.push(array.slice(i, size + i));
-//     } else {
-//       return newArray;
+// longer version on my first try - this works!
+// function zip(first, second) {
+//   var finalArray = [];
+//   if (first.length === second.length) {
+//     for (var i = 0; i < first.length; i++) {
+//       finalArray.push([first[i], second[i]]);
+//     }
+//   } else if (first.length > second.length) {
+//     for (i = 0; i < second.length; i++) {
+//       finalArray.push([first[i], second[i]]);
+//     }
+//   } else if (second.length > first.length) {
+//     for (var i = 0; i < first.length; i++) {
+//       finalArray.push([first[i], second[i]]);
 //     }
 //   }
-//   return newArray;
+
+//   return finalArray;
 // }
