@@ -1,0 +1,42 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.center {
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.border {
+  border: 2px solid black;
+  padding: 2rem 0;
+}
+
+button.previous,
+button.next {
+  background: none;
+  border: none;
+  font-size: 60px;
+}
+
+i {
+  margin-left: 4px;
+}
