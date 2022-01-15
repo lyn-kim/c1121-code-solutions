@@ -6,8 +6,11 @@
 // if no, return false
 
 function isAnagram(firstString, secondString) {
+  var firstStringNoSpaces = firstString.replaceAll(' ', '');
+  var secondStringNoSpaces = secondString.replaceAll(' ', '');
+
   for (var i = 0; i < firstString.length; i++) {
-    if (secondString.includes(firstString.charAt(i)) === true) {
+    if (secondStringNoSpaces.includes(firstStringNoSpaces.charAt(i)) === true) {
       return true;
     }
   }
