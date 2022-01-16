@@ -60,11 +60,11 @@ function titleCase(title) {
     }
 
     if (capitalizedTitle[i].includes(':') === true) {
-      console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
+      // console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
     }
 
   }
-  // console.log('capitalizedTitle:', capitalizedTitle);
+  console.log('capitalizedTitle:', capitalizedTitle);
 
   var result = capitalizedTitle.join(' ');
   return result;
