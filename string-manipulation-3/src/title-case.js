@@ -20,6 +20,10 @@ function titleCase(title) {
   var wordInTitle = title.split(' ');
   var capitalizedTitle = [];
 
+  // function capitalizeLowercaseWord(word) {
+  //   return word[0].toUpperCase() + word.slice(1);
+  // }
+
   for (var i = 0; i < wordInTitle.length; i++) {
     var lowercase = wordInTitle[i].toLowerCase();
     var capitalizedWord = lowercase[0].toUpperCase() + lowercase.slice(1);
@@ -51,6 +55,25 @@ function titleCase(title) {
       capitalizedTitle[i] = lowercase[0].toUpperCase() + lowercase.slice(1);
     }
 
+    if (wordInTitle[i - 1] !== undefined && wordInTitle[i - 1].endsWith(':')) {
+      capitalizedTitle[i] = capitalizedTitle[i][0].toUpperCase() + lowercase.slice(1);
+    }
+
+    if (capitalizedTitle[i].includes('-')) {
+      var splitCurrentWord = capitalizedTitle[i].split('-');
+      console.log('splitCurrentWord:', splitCurrentWord);
+      console.log('splitCurrentWord[1];', splitCurrentWord[1]);
+      var capitalized = splitCurrentWord[1][0].toUpperCase() + splitCurrentWord.slice(1);
+      console.log('capitalized:', capitalized);
+
+      // for (i = 0; i < splitCurrentWord.length; i++) {
+      //   var capitalized = splitCurrentWord[i]
+      //   [1].toUpperCase() + lowercase.slice(1);
+      // }
+      // capitalizedTitle[i] = splitCurrentWord.join('-');
+      // console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
+    }
+
     if (capitalizedTitle[i] === 'Api') {
       capitalizedTitle[i] = 'API';
     } else if (capitalizedTitle[i] === 'Javascript') {
@@ -59,17 +82,32 @@ function titleCase(title) {
       capitalizedTitle[i] = 'JavaScript:';
     }
 
-    if (capitalizedTitle[i].includes(':') === true) {
-      // console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
-    }
-
   }
-  console.log('capitalizedTitle:', capitalizedTitle);
 
   var result = capitalizedTitle.join(' ');
   return result;
 }
 
-// if (capitalizedTitle[i].length <= 3) {
-//   capitalizedTitle[i] = capitalizedTitle[i].toLowerCase();
+// if (capitalizedTitle[i].includes('-')) {
+//   var splitCurrentWord = capitalizedTitle[i].split('');
+//   if (splitCurrentWord[i - 1] === '-') {
+//     console.log('splitCurrentWord:', splitCurrentWord);
+//     var uppercase = splitCurrentWord[i].toUpperCase();
+//     console.log('uppercase:', uppercase);
+//     splitCurrentWord[i] = uppercase;
+//     console.log('splitCurrentWord[i]:', splitCurrentWord[i]);
+//   }
+//   capitalizedTitle[i] = splitCurrentWord.join('');
+// }
+
+// if (capitalizedTitle[i].includes('-')) {
+//   var splitCurrentWord = capitalizedTitle[i].split('');
+//   for (i = 0; i < splitCurrentWord.length; i++) {
+//     if (splitCurrentWord[i - 1] === '-') {
+//       var uppercase = splitCurrentWord[i].toUpperCase();
+//       splitCurrentWord[i] = uppercase;
+//     }
+//   }
+//   capitalizedTitle[i] = splitCurrentWord.join('');
+//   console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
 // }
