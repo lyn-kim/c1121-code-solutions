@@ -64,7 +64,6 @@ function titleCase(title) {
 
       for (i = 0; i < splitCurrentWord.length; i++) {
         var capitalized = splitCurrentWord[i][0].toUpperCase() + splitCurrentWord[i].slice(1);
-        capitalized = capitalized.join('-');
         console.log('capitalized:', capitalized);
         // console.log('splitCurrentWord:', splitCurrentWord);
 
