@@ -61,17 +61,16 @@ function titleCase(title) {
 
     if (capitalizedTitle[i].includes('-')) {
       var splitCurrentWord = capitalizedTitle[i].split('-');
-      console.log('splitCurrentWord:', splitCurrentWord);
-      console.log('splitCurrentWord[1];', splitCurrentWord[1]);
-      var capitalized = splitCurrentWord[1][0].toUpperCase() + splitCurrentWord.slice(1);
-      console.log('capitalized:', capitalized);
 
-      // for (i = 0; i < splitCurrentWord.length; i++) {
-      //   var capitalized = splitCurrentWord[i]
-      //   [1].toUpperCase() + lowercase.slice(1);
-      // }
-      // capitalizedTitle[i] = splitCurrentWord.join('-');
+      for (i = 0; i < splitCurrentWord.length; i++) {
+        var capitalized = splitCurrentWord[i][0].toUpperCase() + splitCurrentWord[i].slice(1);
+        capitalized = capitalized.join('-');
+        console.log('capitalized:', capitalized);
+        // console.log('splitCurrentWord:', splitCurrentWord);
+
+      }
       // console.log('capitalizedTitle[i]:', capitalizedTitle[i]);
+      return capitalizedTitle[i];
     }
 
     if (capitalizedTitle[i] === 'Api') {
