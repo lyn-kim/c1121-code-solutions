@@ -1,0 +1,443 @@
+    1  http GET https://random-words-api.vercel.app/word
+    2  http GET https://random-word-api.herokuapp.com/word?number=10&swear=0
+    3  http GET https://random-words-api.vercel.app/word
+    4  cd ~/repos/c1121-code-solutions
+    5  git switch array-manipulation-3
+    6  cd ~/repos
+    7  git clone git@github.com:lyn-kim/ajax-project.git
+    8  cd ajax-project
+    9  npm ci
+   10  git status
+   11  cd ~/repos/ajax-project
+   12  git branch issue-1-user-can-generate-random-word
+   13  git branch --list
+   14  git switch issue-1-user-can-generate-random-word
+   15  git status
+   16  git add css/layout.css
+   17  git add index.html
+   18  git status
+   19  git commit -m "set up layout classes and add data-view='main-page' to html"
+   20  git status
+   21  git push origin issue-1-user-can-generate-random-word
+   22  git status
+   23  git add css/layout.css
+   24  git add css/styles.css
+   25  git add index.html
+   26  git status
+   27  git commit -m "added navbar and button for Click Here"
+   28  git status
+   29  git push origin issue-1-user-can-generate-random-word
+   30  git status
+   31  git add index.html
+   32  git add js/main.js
+   33  git status
+   34  git commit -m "listen for click events on Click Here button and take user to data-view='new-word'view"
+   35  git status
+   36  git add js/main.js
+   37  git commit -m "listen for click events on Click Here button and take user to data-view='new-word'view"
+   38  git status
+   39  git push origin issue-1-user-can-generate-random-word
+   40  git status
+   41  git add index.html
+   42  git add js/main.js
+   43  git status
+   44  git commit -m "create XMLHttpRequest object to retrieve random word from api"
+   45  git status
+   46  git push origin issue-1-user-can-generate-random-word
+   47  git status
+   48  cd ~/repos/ajax-project
+   49  git status
+   50  git add js/main.js
+   51  git status
+   52  git commit -m "cleanup commented code"
+   53  git push origin issue-1-user-can-generate-word
+   54  git push origin issue-1-user-can-generate-random-word
+   55  git status
+   56  git switch master
+   57  git branch issue-2-user-can-save-words
+   58  git switch issue-2-user-can-save-words
+   59  git status
+   60  git switch master
+   61  git pull origin master
+   62  git status
+   63  git switch issue-2-user-can-save-words
+   64  git switch master
+   65  git switch issue-2-user-can-save-words
+   66  git switch master
+   67  git switch issue-2-user-can-save-words
+   68  git pull origin master
+   69  git status
+   70  git add css/layout.css
+   71  git add css/styles.css
+   72  git add index.html
+   73  git add js/main.js
+   74  git status
+   75  git commit -m "create card view with save button"
+   76  git status
+   77  git push origin issue-2-user-can-save-words
+   78  git status
+   79  git add css/styles.css
+   80  git add js/data.js
+   81  git add js/main.js
+   82  git status
+   83  git commit -m "listen for click events on save button"
+   84  git push origin issue-2-user-can-save-words
+   85  cd ~/repos/ajax-project
+   86  git status
+   87  git add js/data.js
+   88  git add js/main.js
+   89  git status
+   90  git commit -m "removed allCards from data object"
+   91  git status
+   92  git push origin issue-2-user-can-save-words
+   93  git status
+   94  git switch master
+   95  git pull origin master
+   96  git status
+   97  git pull origin master
+   98  git status
+   99  git branch issue-3-user-can-see-study-list
+  100  git switch issue-3-user-can-see-study-list
+  101  git status
+  102  git add index.html
+  103  git status
+  104  git commit -m "add sibling data-view='study-list' to html and add unordered list and placeholder li elements to study list page"
+  105  git push origin issue-3-user-can-see-study-list
+  106  git status
+  107  git add css/styles.css
+  108  git add index.html
+  109  git status
+  110  git commit -m "add placeholder li element and style to match wireframe"
+  111  git status
+  112  git push origin issue-3-user-can-see-study-list
+  113  git status
+  114  git add index.html
+  115  git add js/main.js
+  116  git status
+  117  git commit -m "define function that takes single savedCard in the data model and returns DOM tree on Study List page"
+  118  git status
+  119  git add js/main.js
+  120  git commit -m "define function that takes single savedCard in the data model and returns DOM tree on Study List page"
+  121  git status
+  122  git push origin issue-3-user-can-see-study-list
+  123  git status
+  124  git add css/styles.css
+  125  git add index.html
+  126  git add js/main.js
+  127  git status
+  128  git commit -m "add a link to the navbar for List"
+  129  git push origin issue-3-user-can-see-study-list
+  130  git status
+  131  cd ~/repos/ajax-project
+  132  git status
+  133  git add css/styles.css
+  134  git add index.html
+  135  git add js/main.js
+  136  git status
+  137  git commit -m "Saving a card automatically shows new word on the Study List page without needing reload"
+  138  git push origin issue-3-user-can-see-study-list
+  139  git status
+  140  git add css/styles.css
+  141  git add index.html
+  142  git status
+  143  git commit -m "Show message when there are no words in the Study List"
+  144  git push origin issue-3-user-can-see-study-list
+  145  git status
+  146  git switch master
+  147  git pull origin master
+  148  git status
+  149  git pull origin master
+  150  cd ~/repos/ajax-project
+  151  git status
+  152  git pull origin master
+  153  git branch issue-4-user-can-study-words
+  154  git switch issue-4-user-can-study-words
+  155  git status
+  156  git add css/layout.css
+  157  git add css/styles.css
+  158  git add index.html
+  159  git add js/main.js
+  160  git status
+  161  git commit -m "create STUDY button Study List page and front and rear views of flashcard, ensure all views match wireframe"
+  162  git status
+  163  git push origin issue-4-user-can-study-words
+  164  git status
+  165  git add js/main.js
+  166  git status
+  167  git commit "listen for click events on all flashcard buttons including flip, next, and back"
+  168  git commit -m "listen for click events on all flashcard buttons including flip, next, and back"
+  169  git push origin issue-4-user-can-study-words
+  170  cd ~/repos/ajax-project
+  171  git status
+  172  git add index.html
+  173  git add js/main.js
+  174  git status
+  175  git commit -m "listen for click events on Study, Flip, Back and Next buttons that takes user to word and defintion currently assigned to the currentStudyCard property"
+  176  git push origin issue-4-user-can-study-words
+  177  git status
+  178  git add js/main.js
+  179  git status
+  180  git commit -m "Once user reaches end of list, flashcard starts again from the top"
+  181  git push origin issue-4-user-can-study-words
+  182  git status
+  183  git add css/styles.css
+  184  git status
+  185  git commit -m "check for unnecessary styling"
+  186  git status
+  187  git add css/styles.css
+  188  git status
+  189  git commit -m "fix Study button width on mobile view"
+  190  git status
+  191  git push origin issue-4-user-can-study-words
+  192  git status
+  193  cd ~/repos/ajax-project
+  194  git status
+  195  git add js/main.js
+  196  git commit -m "move increment sign to front of variable name on openFlashCard function"
+  197  git push origin issue-4-user-can-study-words
+  198  git status
+  199  cd ~/repos/ajax-project
+  200  git switch master
+  201  git pull origin master
+  202  git status
+  203  cd ~/repos/ajax-project
+  204  git status
+  205  git add css/styles.css
+  206  git add index.html
+  207  git add js/main.js
+  208  git status
+  209  git commit -m "add a click target for deleting a word and show a confirmation modal when user clicks trash icon"
+  210  git status
+  211  git add js/main.js
+  212  git commit -m "add a click target for deleting a word and show a confirmation modal when user clicks trash icon"
+  213  git status
+  214  git push origin issue-5-user-can-delete-words
+  215  git status
+  216  git add js/main.js
+  217  git status
+  218  git commit -m "hide modal if the user clicks cancel"
+  219  git push origin issue-5-user-can-delete-words
+  220  git status
+  221  git add js/main.js
+  222  git add js/data.js
+  223  git status
+  224  git commit -m "remove word from data model and DOM tree if the user clicks delete and show study list"
+  225  git push origin issue-5-user-can-delete-words
+  226  git status
+  227  git add js/main.js
+  228  git commit -m "hide STUDY button when there are no words saved"
+  229  git push origin issue-5-user-can-delete-words
+  230  git status
+  231  git switch master
+  232  cd ~/repos/c1121-code-solutions
+  233  git status
+  234  git add array-manipulation-3/src/zip.js
+  235  git status
+  236  git commit -m "gcompleted zip problem"
+  237  git status
+  238  git push origin array-manipulation-3
+  239  cd ~/repos/ajax-project
+  240  git branch issue-6-user-can-get-new-word
+  241  git switch issue-6-user-can-get-new-word
+  242  git status
+  243  git add css/styles.css
+  244  git add index.html
+  245  git add js/data.js
+  246  git add js/main.js
+  247  git status
+  248  git commit -m "add NEW button to current card view"
+  249  git push origin issue-6-user-can-get-new-word
+  250  git status
+  251  git add js/main.js
+  252  git commit -m "listen for click events on the NEW button and place request to API for another word and definition"
+  253  git status
+  254  git add css/layout.css
+  255  git status
+  256  git commit -m "adjusted media query for container min-width to 375px"
+  257  git push origin issue-6-user-can-get-new-word
+  258  git status
+  259  git swtich master
+  260  git switch master
+  261  git status
+  262  git pull origin master
+  263  git branch code-cleanup
+  264  git switch code-cleanup
+  265  git status
+  266  git add css/styles.css
+  267  git status
+  268  git commit -m "code cleanup commit"
+  269  git push origin code-cleanup
+  270  git status
+  271  git switch master
+  272  cd ~/repos/c1121-code-solutions
+  273  git status
+  274  git add array-manipulation--3src/unique.js
+  275  git add array-manipulation-3src/unique.js
+  276  git add array-manipulation-3/src/unique.js
+  277  git commit -m "completed unique problem"
+  278  git push origin array-manipulation-3
+  279  git status
+  280  git add array-manipulation-3/src/difference.js
+  281  git commit -m "completed difference problem"
+  282  git push origin array-manipulation-3
+  283  git status
+  284  git add array-manipulation-33/src/intersection.js
+  285  git add array-manipulation-3/src/intersection.js
+  286  git commit -m "completed intersection problem"
+  287  git push origin array-manipulation-3
+  288  git status
+  289  git add array-manipulation-3/src/union.js
+  290  git commit -m "completed union problem"
+  291  git push origin array-manipulation-3
+  292  git status
+  293  git switch master
+  294  git pull origin master
+  295  git branch string-manipulation-3
+  296  git switch string-manipulation-3
+  297  git status
+  298  git add string-manipulation-3
+  299  git status
+  300  git commit -m "palindromic and anagram in progress"
+  301  git status
+  302  git push origin string-manipulation3
+  303  git push origin string-manipulation-3
+  304  cd ~/repos/week-planner
+  305  git status
+  306  git add index.html
+  307  git add styles.css
+  308  git commit -m "add days of the week to landing page"
+  309  git push origin master
+  310  cd ~/repos/c1121-code-solutions
+  311  git status
+  312  git commit string-manipulation-3/src/is-anagram.js
+  313  cd ~/repos/c1121-code-solutions
+  314  git status
+  315  git add string-manipulation-3/src/is-anagram.js
+  316  git status
+  317  git commit -m "completed anagram problem"
+  318  git status
+  319  git push origin string-manipulation-3
+  320  git status
+  321  git add .
+  322  git status
+  323  git commit -m "completed reverse word problem"
+  324  git push origin string-manipulation-3
+  325  git status
+  326  git add .
+  327  git status
+  328  git commit -m "title case problem in progress"
+  329  git commit -m "title case problem in progress" --no-verify
+  330  git push origin string-manipulation-3
+  331  git status
+  332  git add .
+  333  git status
+  334  git commit -m "title case problem in progress" --no-verify
+  335  git status
+  336  git push origin string-manipulation-3
+  337  git status
+  338  git switch master
+  339  git branch object-manipulation-3
+  340  git switch object-manipulation-3
+  341  git status
+  342  git add .
+  343  git status
+  344  git commit -m "started deck problem"
+  345  git commit -m "started deck problem" --no-verify
+  346  cd ~/repos/ajax-project
+  347  git switch master
+  348  git status
+  349  git add .
+  350  git status
+  351  git commit -m "code cleanup progress"
+  352  git push origin code-cleanup
+  353  git switch master
+  354  git switch code-cleanup
+  355  git status
+  356  git switch master
+  357  git branch debug
+  358  git switch debug
+  359  git status
+  360  git add js/main.js
+  361  git status
+  362  git commit -m "debugging openFlashCard function"
+  363  git push origin debug
+  364  git status
+  365  git switch master
+  366  cd ~/repos/c1121-code-solutions
+  367  git status
+  368  git branch command-line-basics
+  369  git switch command-line-basics
+  370  git switch master
+  371  cd command-line-basics
+  372  pwd
+  373  man man
+  374  man cat
+  375  cat laziness.txt
+  376  cat impatience.txt
+  377  cat hubris.txt
+  378  man cat
+  379  cat laziness.txt - impatience.txt - hubris.txt
+  380  cd ~/repos/c1121-code-solutions
+  381  cd command-line-basics
+  382  pwd
+  383  man cat
+  384  cat laziness.txt impatience.txt hubris.txt
+  385  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  386  cat three-virtues.txt
+  387  man ls
+  388  ls
+  389  ls -a
+  390  ls -F
+  391  ls lfz-staff/
+  392  ls lfz-staff -a
+  393  ls lfz-staff -F
+  394  man ls
+  395  ls -aF lfz-staff > lfz-staff/contents.txt
+  396  cat lfz-staff/contents.txt
+  397  man pwd
+  398  pwd
+  399  pwd > i-was-here.txt
+  400  ls
+  401  cat i-was-here.txt
+  402  man echo
+  403  echo 'Hello, World!'
+  404  echo 'Hello, World!' > hello.txt
+  405  ls
+  406  cat hello.txt
+  407  man touch
+  408  touch tag-youre-it.txt
+  409  touch snoot/boop.txt
+  410  ls snoot/
+  411  man mkdir
+  412  mkdir parent
+  413  ls
+  414  man mkdir
+  415  mkdir -p parent/child/grandchild
+  416  touch .gitkeep -p parent/child/grandchild
+  417  touch -p parent/child/grandchild .gitkeep
+  418  touch parent/.gitkeep
+  419  touch child/.gitkeep
+  420  touch parent/child.gitkeep
+  421  touch parent/child/grandchild.gitkeep
+  422  touch child/.gitkeep
+  423  touch -p parent/child/.gitkeep
+  424  touch parent/child/grandchild/.gitkeep
+  425  ls -a
+  426  ls parent
+  427  ls parent/child/grandchild
+  428  ls -a parent/child/grandchild
+  429  man mv
+  430  mv pokiemans pokemon
+  431  ls
+  432  man rm
+  433  rm lol.txt
+  434  ls
+  435  rm -r kill-me/
+  436  ls
+  437  man cp
+  438  cp and-then.txt no-and-then.txt
+  439  ls
+  440  cat and-then.txt no-and-then.txt
+  441  man history
+  442  history
+  443  history > command-history.txt
