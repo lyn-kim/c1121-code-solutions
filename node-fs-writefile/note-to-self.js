@@ -1,6 +1,7 @@
 const fs = require('fs');
+const note = '' + process.argv[2];
 
-fs.writeFile('note.txt', process.argv[2], err => {
+fs.writeFile('note.txt', note, 'utf8', err => {
   if (err) {
     console.error(err);
   }
