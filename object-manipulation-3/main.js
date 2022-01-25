@@ -38,16 +38,7 @@ function createDeck() {
 
 createDeck();
 
-const shuffledDeck = [];
-function shuffle() {
-  shuffledDeck.push(_.shuffle(deck));
-  for (let i = 0; i < shuffledDeck[0].length; i++) {
-    shuffledDeck.push(shuffledDeck[0][i]);
-  }
-  shuffledDeck.shift();
-}
-
-shuffle();
+const shuffledDeck = _.shuffle(createDeck());
 
 function dealCards() {
   players[0].hand = [shuffledDeck.pop(), shuffledDeck.pop()];
