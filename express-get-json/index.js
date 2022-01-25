@@ -26,11 +26,10 @@ const app = express();
 app.get('/api/grades', function (req, res) {
   const grade = [];
   for (const key in grades) {
-    grade.push({ key });
+    grade.push(grades[key]);
   }
   res.json(grade);
 });
 
 app.listen(3000, () => {
-  console.log('Listening on port 3000!');
 });
