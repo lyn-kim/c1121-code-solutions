@@ -27,7 +27,7 @@ app.get('/api/grades', function (req, res) {
   for (const key in grades) {
     gradesArray.push(grades[key]);
   }
-  res.json(grades);
+  res.json(gradesArray);
 });
 
 app.use(express.json());
