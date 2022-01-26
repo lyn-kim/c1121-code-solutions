@@ -1,5 +1,5 @@
 {
-  "nextId": 12,
+  "nextId": 29,
   "notes": {
     "2": {
       "id": 2,
@@ -17,13 +17,9 @@
       "id": 9,
       "content": "Inertia is a property of matter."
     },
-    "10": {
-      "content": "JavaScript can be very confusing",
-      "id": 10
-    },
-    "11": {
-      "content": "Express is tricky!",
-      "id": 11
+    "27": {
+      "content": "choo choo",
+      "id": 27
     }
   }
 }
