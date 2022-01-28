@@ -3,6 +3,6 @@ select "genres"."name",
   from "actors"
   join "castMembers" using ("actorId")
   join "filmGenre" using ("filmId")
-  join "genres" using ("genreId")
-where "actors"."firstName" = 'Lisa'
-  group by "genres"."genreId";
+  join "genres" using ("genreId");
+  -- group by "genreId"
+  -- where "firstName" = 'Lisa';
