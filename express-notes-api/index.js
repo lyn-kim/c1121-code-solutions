@@ -31,12 +31,8 @@ app.get('/api/notes/:id', (req, res) => {
     res.status(400).json(notPositiveIntMsg);
   } else if (data.notes[req.params.id] === undefined) {
     res.status(404).json(idNotFoundMsg);
-  } else if (req.params.id) {
-    for (const key in data.notes) {
-      if (key === req.params.id) {
-        res.status(200).json(data.notes[req.params.id]);
-      }
-    }
+  } else if (data.notes[req.params.id]) {
+    res.status(200).json(data.notes[req.params.id]);
   }
 });
 
