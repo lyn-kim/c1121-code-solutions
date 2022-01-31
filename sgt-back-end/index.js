@@ -8,10 +8,7 @@ const invalidGradeMsg = {
   error: 'missing or invalid input'
 };
 const invalidGradeIdMsg = {
-  error: 'invalid "gradeId"'
-};
-const notPositiveIntMsg = {
-  error: '"gradeid" must be a positive integer'
+  error: 'invalid gradeId'
 };
 
 // only create ONE pool for your whole server
@@ -91,8 +88,6 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
   if (!Number.isInteger(gradeId) || gradeId <= 0) {
     res.status(400).json(invalidGradeIdMsg);
-  } else if (gradeId === undefined) {
-    res.status(404).json(idNotFoundMsg);
     return;
   }
 
@@ -119,7 +114,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
     .then(result => {
       const grade = result.rowCount;
       if (!grade) {
-        res.status(500).json(unexpectedErrorMsg);
+        res.status(404).json(idNotFoundMsg);
       } else {
         res.status(200).json(input);
       }
@@ -135,13 +130,31 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   const idNotFoundMsg = {
     error: `cannot find note with id ${gradeId}`
   };
+
   if (gradeId < 0 || !Number.isInteger(gradeId)) {
     res.status(400).json(invalidGradeIdMsg);
-  } else if (gradeId > 0 && gradeId === undefined) {
-    res.status(404).json(idNotFoundMsg);
-  } else {
-    delete db.gradeId;
+    return;
   }
+
+  const sql = `
+    delete from grades
+    where "gradeId" = ${gradeId};
+  `;
+
+  db.query(sql)
+    .then(result => {
+      const grade = result.rowCount;
+      if (!grade) {
+        res.status(404).json(idNotFoundMsg);
+      } else {
+        res.status(204).json(grade);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json(unexpectedErrorMsg);
+    });
+
 });
 
 app.listen(3000, () => {
