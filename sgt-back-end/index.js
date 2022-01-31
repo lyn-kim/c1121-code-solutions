@@ -62,16 +62,15 @@ app.post('/api/grades', (req, res) => {
   const params = [input.name, input.course, input.score];
   const sql = `
   insert into grades (name, course, score)
-  values ($1, $2, $3);
+  values ($1, $2, $3)
+  returning *;
   `;
 
   db.query(sql, params)
     .then(result => {
-      const grade = result.rowCount;
-      if (!grade) {
-        res.status(500).json(unexpectedErrorMsg);
-      } else {
-        res.status(201).json(input);
+      const grade = result.rows[0];
+      if (grade) {
+        res.status(201).json(grade);
       }
     })
     .catch(err => {
@@ -107,16 +106,17 @@ app.put('/api/grades/:gradeId', (req, res) => {
        set name   = $1,
            course = $2,
            score  = $3
-     where "gradeId" = ${gradeId};
+     where "gradeId" = ${gradeId}
+     returning *;
     `;
 
   db.query(sql, params)
     .then(result => {
-      const grade = result.rowCount;
+      const grade = result.rows[0];
       if (!grade) {
         res.status(404).json(idNotFoundMsg);
       } else {
-        res.status(200).json(input);
+        res.status(200).json(grade);
       }
     })
     .catch(err => {
