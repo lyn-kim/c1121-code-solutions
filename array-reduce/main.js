@@ -40,8 +40,12 @@ const transactionReducer = (currentTotal, transaction) => {
 const balance = account.reduce(transactionReducer, 0);
 console.log('balance:', balance);
 
-const pair = (trait1, trait2) => {
-  return Object.assign({}, trait1, trait2);
-};
-const composite = traits.reduce(pair);
+const composite = traits.reduce((composite, trait) => {
+  return Object.assign(composite, trait);
+}, {});
+
+// const pair = (trait1, trait2) => {
+//   return Object.assign({}, trait1, trait2);
+// };
+// const composite = traits.reduce(pair);
 console.log('composite:', composite);
