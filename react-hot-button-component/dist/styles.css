@@ -1,0 +1,34 @@
+button {
+  padding: 0.7rem;
+  border: 1px solid black;
+}
+
+.three-clicks {
+  background-color: rgb(85, 5, 85);
+  color: white;
+}
+
+.six-clicks {
+  background-color: rgb(172, 134, 172);
+  color: white;
+}
+
+.nine-clicks {
+  background-color: rgb(245, 104, 88);
+  color: white;
+}
+
+.twelve-clicks {
+  background-color: rgb(240, 189, 95);
+  color: black;
+}
+
+.fifteen-clicks {
+  background-color: yellow;
+  color: black;
+}
+
+.infinity {
+  background-color: white;
+  color: black;
+}
