@@ -9,8 +9,10 @@ export default class Stopwatch extends React.Component {
     };
     this.startTimer = this.startTimer.bind(this);
     this.pauseTimer = this.pauseTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
     this.begin = this.begin.bind(this);
     this.pause = this.pause.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   startTimer() {
@@ -23,10 +25,6 @@ export default class Stopwatch extends React.Component {
     }, 1000);
   }
 
-  pauseTimer() {
-    clearInterval(this.intervalId);
-  }
-
   begin() {
     this.setState({
       ticking: true
@@ -34,11 +32,24 @@ export default class Stopwatch extends React.Component {
     this.startTimer();
   }
 
+  pauseTimer() {
+    clearInterval(this.intervalId);
+  }
+
   pause() {
     this.setState({
       ticking: false
     });
     this.pauseTimer();
+  }
+
+  resetTimer() {
+    clearInterval(this.intervalId);
+    this.setState({ count: 0 });
+  }
+
+  reset() {
+    this.resetTimer();
   }
 
   render() {
@@ -50,6 +61,13 @@ export default class Stopwatch extends React.Component {
           <h1 className="time">{count}</h1>
         </div>
         <div onClick={this.begin} className="action"><i className="fas fa-play fa-2x"></i></div>
+      </div>;
+    } else if (status === false && count !== 0) {
+      return <div className="container">
+        <div onClick={this.reset} className="face">
+          <h1 className="time">{count}</h1>
+        </div>
+        <div className="action"><i className="fas fa-play fa-2x"></i></div>
       </div>;
     }
     return <div className="container">
