@@ -1,0 +1,23 @@
+.container {
+  width: 10rem;
+  margin: auto;
+}
+
+.face {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  border: 4px solid black;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.time {
+  font-family: arial, "Helvetica Neue", helvetica, sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+.action {
+  text-align: center;
+}
