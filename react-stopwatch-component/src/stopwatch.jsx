@@ -49,32 +49,32 @@ export default class Stopwatch extends React.Component {
   }
 
   reset() {
-    this.resetTimer();
+    if (!this.state.ticking) {
+      this.resetTimer();
+    }
   }
 
   render() {
     const count = this.state.count;
     const status = this.state.ticking;
+
     if (!status) {
-      return <div className="container">
-        <div className="face">
+      return (
+      <div className="container">
+        <div onClick={this.reset}className="face">
           <h1 className="time">{count}</h1>
         </div>
         <div onClick={this.begin} className="action"><i className="fas fa-play fa-2x"></i></div>
-      </div>;
-    } else if (status === false && count !== 0) {
-      return <div className="container">
-        <div onClick={this.reset} className="face">
-          <h1 className="time">{count}</h1>
-        </div>
-        <div className="action"><i className="fas fa-play fa-2x"></i></div>
-      </div>;
+      </div>
+      );
     }
-    return <div className="container">
+    return (
+    <div className="container">
       <div className="face">
         <h1 className="time">{count}</h1>
       </div>
       <div onClick={this.pause} className="action"><i className="fas fa-pause fa-2x"></i></div>
-    </div>;
+    </div>
+    );
   }
 }
