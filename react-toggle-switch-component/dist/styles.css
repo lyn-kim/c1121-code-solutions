@@ -1,0 +1,33 @@
+.container-off {
+  width: 4rem;
+  height: 2rem;
+  background-color: lightgray;
+  border: 2px solid rgb(129, 129, 129);
+  border-radius: 1rem;
+}
+
+.switch-off {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 1rem;
+}
+
+.container-on {
+  width: 4rem;
+  height: 2rem;
+  background-color: rgb(75, 189, 75);
+  border: 2px solid rgb(129, 129, 129);
+  border-radius: 1rem;
+}
+
+.switch-on {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 1rem;
+  position: relative;
+  left: 2rem;
+}
