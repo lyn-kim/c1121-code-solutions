@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class NewsletterForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: ' ' };
+    this.state = { email: '' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,10 +21,9 @@ class NewsletterForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Email <input type="email" email={this.state.email} onChange={this.handleChange}/>
-        </label>
-        <input type="submit" value="Sign Up" />
+        <label htmlFor="signup-email">Email</label>
+        <input name="email" id="signup-email" type="email" value={this.state.email} onChange={this.handleChange}/>
+        <button>Sign Up</button>
       </form>
     );
   }
