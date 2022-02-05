@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("https://mkpcdn.com/1000x/a62e713636ac5cd3173e4ccb793eb1fa_164232.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.burger-menu {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.nav-container {
+  position: relative;
+}
+
+.nav-bg {
+  background-color: white;
+  position: fixed;
+  padding: 1.5rem;
+  height: 100vh;
+  width: 15rem;
+  border-right: 3px solid rgb(94, 94, 94);
+}
+
+.nav-title {
+  margin-bottom: 2rem;
+}
+
+.nav-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 1.2rem 0;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  font-weight: 700;
+  color: rgb(223, 171, 0);
+}
+
+.shadow {
+  position: relative;
+  left: 18rem;
+  height: 100vh;
+  background: rgba(56, 56, 56, 0.8);
+}
