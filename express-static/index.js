@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const directory = path.join(__dirname, 'public');
-const access = express.static(directory);
+const publicPath = path.join(__dirname, 'public');
+const staticMiddleware = express.static(publicPath);
 
-app.use(access);
+app.use(staticMiddleware);
 
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
