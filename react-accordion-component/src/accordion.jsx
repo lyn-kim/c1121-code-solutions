@@ -52,40 +52,20 @@ export default class Accordion extends React.Component {
       <div className="container">
         {this.state.topics.map(topic => {
           return (
-            <div onClick={() => this.toggleTopic(topic.id)} className="topic" key={topic.id}>
-              {topic.name}
+            <React.Fragment key={topic.id}>
+              <div onClick={() => this.toggleTopic(topic.id)} className="topic" key={topic.id}>
+                {topic.name}
+              </div>
               {this.state.activeTopicId === topic.id && (
                 <div className="detail" key={topic.id}>
                   {topic.detail}
                 </div>
               )}
-            </div>
+            </React.Fragment>
           );
         })}
       </div>
     );
-
   }
 
 }
-
-// return (
-//   <div className="container">
-//     {this.state.topics.map(topic => {
-//       return (
-//         <div onClick={this.hideDetail} className="topic" key={topic.id}>
-//           {topic.name}
-//         </div>
-//       );
-//     })}
-//   </div>
-// );
-// }
-
-// {this.state.topics.map(desc => {
-//   return (
-//     <div className="detail" key={desc.id}>
-//       {desc.detail}
-//     </div>
-//   );
-// })}
