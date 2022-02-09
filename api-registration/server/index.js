@@ -36,16 +36,13 @@ app.post('/api/auth/sign-up', (req, res, next) => {
         returning "username", "userId", "createdAt";
       `;
       const params = [username, hashedPassword];
-      db.query(sql, params)
-        .then(result => {
-          const [newUser] = result.rows;
-          res.status(201).json(newUser);
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    });
-
+      return db.query(sql, params);
+    })
+    .then(result => {
+      const [newUser] = result.rows;
+      res.status(201).json(newUser);
+    })
+    .catch(err => next(err));
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉
@@ -58,7 +55,6 @@ app.post('/api/auth/sign-up', (req, res, next) => {
    *
    * Hint: Insert statements can include a `returning` clause to retrieve the insterted row(s).
    */
-
 });
 
 app.use(errorMiddleware);
