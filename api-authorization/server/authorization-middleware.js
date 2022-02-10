@@ -11,10 +11,20 @@ function authorizationMiddleware(req, res, next) {
     req.user = jwt.verify(accessToken, process.env.TOKEN_SECRET);
     next();
   } catch (err) {
-    console.error(err);
+    next(err);
   }
-
 }
+
+// TIM'S VERSION
+// function authorizationMiddleware(req, res, next) {
+//   const accessToken = req.get('X-Access-Token');
+//   if (!accessToken) {
+//     throw new ClientError(401, 'authentication required');
+//   }
+//   const payload = jwt.verify(accessToken, process.env.TOKEN_SECRET);
+//   req.user = payload;
+//   next();
+// }
 
 /**
  * Try to get the 'X-Access-Token' from the request headers.
