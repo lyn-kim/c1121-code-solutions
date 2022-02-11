@@ -1,0 +1,60 @@
+User can sign up
+When the app first loads on localhost:3000, the page gets rendered with
+the state isAuthorizing:true and user:null.
+Once componentDidMount() runs for the first time, this.state.isAuthorizing is
+set to false which renders the page with the Auth component where the user
+has the option to either sign-in or sign-up.
+If the path chosen is to sign-up, sign-up page is rendered.
+Once user provides new username and password and click 'Register', client's
+POST request is made to api/auth/sign-up where the server first checks to see
+if the request body contains both username and password (along with its values).
+If not, a ClientError is thrown.
+If both username and password is provided:
+  - the login info is stringified and saved in this.state
+  - argon2 hashes the password, queries the database and returns the query result
+  - takes the query return value and inserts a new row in the users db with the
+    provided username and hashedPassword
+  - once the new user is successfully saved in the db, a 201 status is sent back
+
+User can sign in
+When the app first loads on localhost:3000, the page gets rendered with
+the state isAuthorizing:true and user:null.
+Once componentDidMount() runs for the first time, this.state.isAuthorizing is
+set to false which renders the page with the Auth component where the user
+has the option to either sign-in or sign-up.
+If the path chosen is to sign-in, sign-in page is rendered.
+Once user provides new username and password and click 'Register', client's
+POST request is made to api/auth/sign-in where the server checks to see if the
+request body contains both the username and password (along with its values).
+If not, a ClientError is thrown.
+If both username and password are provided:
+  - the login info is stringified and saved in this.state
+  - database gets queried to check if the username exists
+    - if user does not exist, a 401 ClientError is thrown
+    - if user does exist,
+      - a new object is made containing the user's hashedPassword and
+        provided password
+      - then argon2 verifies to see if the passwords match
+        - if it does not match, a 401 ClientError is thrown
+        - if it does match,
+            - then a new payload object is created containing the
+              userId and username properties
+            - a new signed token is created using the payload and the TOKEN_SECRET
+            - a messae is sent to client containing a 200 response with token
+              and payload
+
+User can stay signed in (even if they refresh the page)
+When the app loads and this.state.isAuthorizing is still set to false from
+a previous visit, the page is rendered with the Navbar and PageContainer
+React components.
+Then componentDidMount runs to check if user and token information is available
+in the state. Token is indeed provided and the state isAuthorizing remains at false.
+Since the current state still retained this.state.user value, the route leads
+user to hash (the home page) which renders the Home React component.
+
+User can sign out
+From the home page, the user can click on the Sign Out button which triggers
+handleSignOut(). Once this is called, the token is removed from localStorage
+and the user is once again set to null.
+Once the new state has been set, renderPage() is run again which recognizes
+that the isAuthorizing is set to
