@@ -5,13 +5,13 @@ User can sign up
   set to false which renders the page with the Auth React component where the
   user has the option to either sign-in or sign-up
 - If the path chosen is to sign-up, the sign-up page is rendered
-- Once user provides a new username and password then click 'Register', client's
-  POST request is made to api/auth/sign-up where:
+- Once user provides a new username and password then click 'Register':
+    - the login info is stringified and saved in this.state
+    - client's POST request is made to api/auth/sign-up where:
     - the server first checks to see if the request body contains both username
       and password (along with its values)
           - If not, a ClientError is thrown
           - If both username and password are provided:
-            - the login info is stringified and saved in this.state
             - argon2 hashes the password, queries the database and returns the
               query result
             - takes the query's return value and inserts a new row in the users
@@ -27,13 +27,13 @@ User can sign in
   has the option to either sign-in or sign-up
 - If the path chosen is to sign-in, the sign-in page is rendered
 - Once user provides new username and password and click 'Log In':
+    - login info is stringified and saved in this.state
     - the user's token gets stored in localStorage for future use
     - client's POST request is sent to api/auth/sign-in where:
       - the server checks to see if the request body contains both the username
         and password (along with its values)
         - If not, a ClientError is thrown
         - If both username and password are provided:
-          - login info is stringified and saved in this.state
           - database gets queried to check if the username exists
             - if user does not exist, a 401 ClientError is thrown
             - if user does exist,
