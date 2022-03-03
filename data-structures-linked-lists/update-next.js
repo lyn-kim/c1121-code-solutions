@@ -2,7 +2,7 @@
 
 function updateNext(list, value) {
   if (list.next === null) {
-    return list.next;
+    return list;
   }
-  list.next.next = value;
+  list.next.data = value;
 }

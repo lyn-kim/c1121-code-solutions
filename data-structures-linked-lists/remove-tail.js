@@ -1,8 +1,11 @@
 /* exported removeTail */
 
 function removeTail(list) {
-  while (list.next !== null) {
+  if (list.next === null) {
+    return list.next;
+  }
+  while (list.next.next !== null) {
     list = list.next;
   }
-  list.next = list.data;
+  list.next = null;
 }

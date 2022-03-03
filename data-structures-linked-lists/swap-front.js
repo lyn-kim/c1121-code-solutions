@@ -4,8 +4,11 @@ function swapFront(list) {
   if (list.next === null) {
     return list;
   }
-  const firstNode = list.data;
+  let firstNode = list;
   const secondNode = list.next;
-  list.data = secondNode;
-  list.next = firstNode;
+  const remainingNodes = list.next.next;
+  firstNode = secondNode;
+  firstNode.next = list;
+  firstNode.next.next = remainingNodes;
+  return firstNode;
 }
