@@ -1,0 +1,22 @@
+.stopwatch {
+  width: 240px;
+  margin: 2rem;
+  text-align: center;
+}
+
+.stopwatch .start-stop {
+  font-size: 2rem;
+}
+
+.stopwatch .watch-face {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto 2rem;
+  border: 3px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
